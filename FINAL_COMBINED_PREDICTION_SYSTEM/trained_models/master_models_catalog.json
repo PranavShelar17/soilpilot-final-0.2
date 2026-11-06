@@ -1,0 +1,257 @@
+{
+    "CaCO3_percent": {
+        "target": "CaCO3_percent",
+        "label": "Calcium Carbonate CaCO\u2083 (%)",
+        "unit": "%",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.7438,
+            "ML": 0.0,
+            "RK": 0.2562
+        },
+        "dominant_component": "Kriging",
+        "holdout_r2": 0.8333,
+        "holdout_rmse": 3.4107,
+        "holdout_range_accuracy_pct": 86.2,
+        "calibration_r2": 1.0,
+        "model_file": "master_perfect_model_CaCO3_percent.joblib"
+    },
+    "Fe_mg_kg": {
+        "target": "Fe_mg_kg",
+        "label": "Available Iron Fe (mg/kg)",
+        "unit": "mg/kg",
+        "weights": {
+            "IDW": 0.018401840184018404,
+            "Kriging": 0.816981698169817,
+            "ML": 0.16461646164616464,
+            "RK": 0.0
+        },
+        "dominant_component": "Kriging",
+        "holdout_r2": 0.4704,
+        "holdout_rmse": 2.0949,
+        "holdout_range_accuracy_pct": 75.09,
+        "calibration_r2": 0.9998,
+        "model_file": "master_perfect_model_Fe_mg_kg.joblib"
+    },
+    "Cu_mg_kg": {
+        "target": "Cu_mg_kg",
+        "label": "Available Copper Cu (mg/kg)",
+        "unit": "mg/kg",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.2483,
+            "ML": 0.7517,
+            "RK": 0.0
+        },
+        "dominant_component": "ML (RandomForest)",
+        "holdout_r2": 0.7346,
+        "holdout_rmse": 0.5885,
+        "holdout_range_accuracy_pct": 87.45,
+        "calibration_r2": 0.9931,
+        "model_file": "master_perfect_model_Cu_mg_kg.joblib"
+    },
+    "Zn_mg_kg": {
+        "target": "Zn_mg_kg",
+        "label": "Available Zinc Zn (mg/kg)",
+        "unit": "mg/kg",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.2789,
+            "ML": 0.7211,
+            "RK": 0.0
+        },
+        "dominant_component": "ML (ExtraTrees)",
+        "holdout_r2": 0.7226,
+        "holdout_rmse": 0.2979,
+        "holdout_range_accuracy_pct": 83.54,
+        "calibration_r2": 0.9926,
+        "model_file": "master_perfect_model_Zn_mg_kg.joblib"
+    },
+    "K_kg_ha": {
+        "target": "K_kg_ha",
+        "label": "Available Potassium K (kg/ha)",
+        "unit": "kg/ha",
+        "weights": {
+            "IDW": 0.168,
+            "Kriging": 0.179,
+            "ML": 0.0,
+            "RK": 0.653
+        },
+        "dominant_component": "Regression Kriging",
+        "holdout_r2": -0.3081,
+        "holdout_rmse": 342.5303,
+        "holdout_range_accuracy_pct": 71.97,
+        "calibration_r2": 1.0,
+        "model_file": "master_perfect_model_K_kg_ha.joblib"
+    },
+    "N_kg_ha": {
+        "target": "N_kg_ha",
+        "label": "Available Nitrogen N (kg/ha)",
+        "unit": "kg/ha",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.4974,
+            "ML": 0.5026,
+            "RK": 0.0
+        },
+        "dominant_component": "ML (XGBoost)",
+        "holdout_r2": 0.397,
+        "holdout_rmse": 33.1956,
+        "holdout_range_accuracy_pct": 76.95,
+        "calibration_r2": 0.9912,
+        "model_file": "master_perfect_model_N_kg_ha.joblib"
+    },
+    "pH": {
+        "target": "pH",
+        "label": "Soil pH",
+        "unit": "pH units",
+        "weights": {
+            "IDW": 0.0441,
+            "Kriging": 0.5972,
+            "ML": 0.2067,
+            "RK": 0.152
+        },
+        "dominant_component": "Kriging",
+        "holdout_r2": 0.4538,
+        "holdout_rmse": 0.1923,
+        "holdout_range_accuracy_pct": 84.62,
+        "calibration_r2": 0.9984,
+        "model_file": "master_perfect_model_pH.joblib"
+    },
+    "OC_percent": {
+        "target": "OC_percent",
+        "label": "Organic Carbon OC (%)",
+        "unit": "%",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.1816,
+            "ML": 0.8184,
+            "RK": 0.0
+        },
+        "dominant_component": "ML (XGBoost)",
+        "holdout_r2": 0.4298,
+        "holdout_rmse": 0.2079,
+        "holdout_range_accuracy_pct": 81.76,
+        "calibration_r2": 0.9765,
+        "model_file": "master_perfect_model_OC_percent.joblib"
+    },
+    "SOM_percent": {
+        "target": "SOM_percent",
+        "label": "Soil Organic Matter SOM (%)",
+        "unit": "%",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.4883,
+            "ML": 0.5117,
+            "RK": 0.0
+        },
+        "dominant_component": "ML (RandomForest)",
+        "holdout_r2": 0.0685,
+        "holdout_rmse": 0.2828,
+        "holdout_range_accuracy_pct": 69.59,
+        "calibration_r2": 0.9942,
+        "model_file": "master_perfect_model_SOM_percent.joblib"
+    },
+    "Mn_mg_kg": {
+        "target": "Mn_mg_kg",
+        "label": "Available Manganese Mn (mg/kg)",
+        "unit": "mg/kg",
+        "weights": {
+            "IDW": 0.6341,
+            "Kriging": 0.0082,
+            "ML": 0.2875,
+            "RK": 0.0702
+        },
+        "dominant_component": "IDW",
+        "holdout_r2": 0.2416,
+        "holdout_rmse": 3.9088,
+        "holdout_range_accuracy_pct": 77.69,
+        "calibration_r2": 0.998,
+        "model_file": "master_perfect_model_Mn_mg_kg.joblib"
+    },
+    "S_kg_ha": {
+        "target": "S_kg_ha",
+        "label": "Available Sulphur S (kg/ha)",
+        "unit": "kg/ha",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.033,
+            "ML": 0.0,
+            "RK": 0.967
+        },
+        "dominant_component": "Regression Kriging",
+        "holdout_r2": 0.3072,
+        "holdout_rmse": 18.9422,
+        "holdout_range_accuracy_pct": 78.3,
+        "calibration_r2": 1.0,
+        "model_file": "master_perfect_model_S_kg_ha.joblib"
+    },
+    "P_kg_ha": {
+        "target": "P_kg_ha",
+        "label": "Available Phosphorus P (kg/ha)",
+        "unit": "kg/ha",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.6268,
+            "ML": 0.3732,
+            "RK": 0.0
+        },
+        "dominant_component": "Kriging",
+        "holdout_r2": 0.1286,
+        "holdout_rmse": 12.6346,
+        "holdout_range_accuracy_pct": 76.77,
+        "calibration_r2": 0.9939,
+        "model_file": "master_perfect_model_P_kg_ha.joblib"
+    },
+    "total_carbon_percent": {
+        "target": "total_carbon_percent",
+        "label": "Total Carbon (%)",
+        "unit": "%",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.0,
+            "ML": 0.514,
+            "RK": 0.486
+        },
+        "dominant_component": "ML (ExtraTrees)",
+        "holdout_r2": -0.8225,
+        "holdout_rmse": 0.3919,
+        "holdout_range_accuracy_pct": 61.7,
+        "calibration_r2": 0.9963,
+        "model_file": "master_perfect_model_total_carbon_percent.joblib"
+    },
+    "EC_dS_m": {
+        "target": "EC_dS_m",
+        "label": "Electrical Conductivity EC (dS/m)",
+        "unit": "dS/m",
+        "weights": {
+            "IDW": 0.0,
+            "Kriging": 0.8476,
+            "ML": 0.0,
+            "RK": 0.1524
+        },
+        "dominant_component": "Kriging",
+        "holdout_r2": 0.1626,
+        "holdout_rmse": 0.2849,
+        "holdout_range_accuracy_pct": 72.07,
+        "calibration_r2": 1.0,
+        "model_file": "master_perfect_model_EC_dS_m.joblib"
+    },
+    "moisture_bulk_density_g_cm3": {
+        "target": "moisture_bulk_density_g_cm3",
+        "label": "Bulk Density (g/cm\u00b3)",
+        "unit": "g/cm\u00b3",
+        "weights": {
+            "IDW": 0.3041,
+            "Kriging": 0.0,
+            "ML": 0.6959,
+            "RK": 0.0
+        },
+        "dominant_component": "ML (RandomForest)",
+        "holdout_r2": -0.2512,
+        "holdout_rmse": 0.1269,
+        "holdout_range_accuracy_pct": 73.34,
+        "calibration_r2": 0.9371,
+        "model_file": "master_perfect_model_moisture_bulk_density_g_cm3.joblib"
+    }
+}

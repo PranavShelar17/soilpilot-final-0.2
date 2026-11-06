@@ -1,0 +1,76 @@
+Target,Target_Label,Unit,Model_Architecture,Test_R2,Test_RMSE,Test_MAE,Test_Range_Accuracy_Pct,Test_Value_Accuracy_Pct,Test_RPD,Test_RPIQ,Test_NSE,Test_Lins_CCC,Test_Pearson_r,Test_Mean_Bias,Calibration_R2,Calibration_RMSE,Calibration_MAE,Calibration_Range_Accuracy_Pct,Calibration_Value_Accuracy_Pct
+CaCO3_percent,Calcium Carbonate CaCO₃ (%),%,IDW,0.6503,4.9406,2.8809,80.01,51.46,1.691,3.196,0.6503,0.8423,0.8522,1.0755,0.9999,0.0916,0.012,99.72,99.84
+CaCO3_percent,Calcium Carbonate CaCO₃ (%),%,Ordinary_Kriging,0.7928,3.803,2.4212,84.62,56.61,2.197,4.152,0.7928,0.9015,0.9082,0.9792,1.0,0.0,0.0,100.0,100.0
+CaCO3_percent,Calcium Carbonate CaCO₃ (%),%,Regression_XGBoost,0.8886,2.7888,2.2058,88.72,60.75,2.996,5.662,0.8886,0.9429,0.9452,0.529,0.9947,0.7453,0.5766,97.7,92.29
+CaCO3_percent,Calcium Carbonate CaCO₃ (%),%,Regression_Kriging,0.8882,2.7934,2.2147,88.7,60.58,2.991,5.653,0.8882,0.9427,0.9452,0.5489,1.0,0.0,0.0,100.0,100.0
+CaCO3_percent,Calcium Carbonate CaCO₃ (%),%,COMBINED_PERFECT_SYSTEM,0.8333,3.4107,2.2993,86.2,58.6,2.449,4.63,0.8333,0.9186,0.9237,0.869,1.0,0.0,0.0,100.0,100.0
+Fe_mg_kg,Available Iron Fe (mg/kg),mg/kg,IDW,0.4346,2.1645,1.4799,74.26,65.49,1.33,2.675,0.4346,0.7407,0.7466,-0.2956,0.9999,0.0412,0.0054,99.71,99.87
+Fe_mg_kg,Available Iron Fe (mg/kg),mg/kg,Ordinary_Kriging,0.3619,2.2994,1.3499,72.66,67.18,1.252,2.518,0.3619,0.7589,0.7903,0.5105,1.0,0.0,0.0,100.0,100.0
+Fe_mg_kg,Available Iron Fe (mg/kg),mg/kg,Regression_RandomForest,0.7431,1.4591,1.1304,82.65,68.26,1.973,3.968,0.7431,0.885,0.9022,0.5236,0.9912,0.3326,0.258,97.67,61.46
+Fe_mg_kg,Available Iron Fe (mg/kg),mg/kg,Regression_Kriging,0.6931,1.5947,1.1766,81.04,70.19,1.805,3.631,0.6931,0.8697,0.8912,0.536,1.0,0.0,0.0,100.0,100.0
+Fe_mg_kg,Available Iron Fe (mg/kg),mg/kg,COMBINED_PERFECT_SYSTEM,0.4704,2.0949,1.232,75.09,70.48,1.374,2.764,0.4704,0.7904,0.8161,0.4978,0.9998,0.0548,0.0426,99.62,93.66
+Cu_mg_kg,Available Copper Cu (mg/kg),mg/kg,IDW,0.6479,0.6779,0.4908,85.55,67.43,1.685,2.751,0.6479,0.8158,0.8195,-0.0901,1.0,0.0013,0.0002,99.97,99.99
+Cu_mg_kg,Available Copper Cu (mg/kg),mg/kg,Ordinary_Kriging,0.6962,0.6296,0.4418,86.58,68.15,1.814,2.962,0.6962,0.8308,0.8367,-0.034,1.0,0.0,0.0,100.0,100.0
+Cu_mg_kg,Available Copper Cu (mg/kg),mg/kg,Regression_RandomForest,0.6958,0.6301,0.4573,86.57,69.8,1.813,2.96,0.6958,0.8245,0.8415,-0.1268,0.9878,0.1357,0.1006,97.2,75.9
+Cu_mg_kg,Available Copper Cu (mg/kg),mg/kg,Regression_Kriging,0.7045,0.621,0.4128,86.76,72.89,1.84,3.003,0.7045,0.8334,0.8469,-0.1253,1.0,0.0,0.0,100.0,100.0
+Cu_mg_kg,Available Copper Cu (mg/kg),mg/kg,COMBINED_PERFECT_SYSTEM,0.7346,0.5885,0.407,87.45,71.78,1.941,3.169,0.7346,0.8448,0.8622,-0.1037,0.9931,0.102,0.0756,97.89,81.88
+Zn_mg_kg,Available Zinc Zn (mg/kg),mg/kg,IDW,0.6641,0.3278,0.2431,81.89,15.35,1.725,2.776,0.6641,0.8023,0.8519,-0.1374,0.9983,0.0247,0.0034,99.04,99.73
+Zn_mg_kg,Available Zinc Zn (mg/kg),mg/kg,Ordinary_Kriging,0.7318,0.2929,0.2332,83.82,0.0,1.931,3.107,0.7318,0.84,0.8575,-0.0265,1.0,0.0,0.0,100.0,100.0
+Zn_mg_kg,Available Zinc Zn (mg/kg),mg/kg,Regression_ExtraTrees,0.6887,0.3155,0.2372,82.57,0.0,1.792,2.884,0.6887,0.7907,0.8702,-0.099,0.9858,0.0715,0.0543,97.23,82.35
+Zn_mg_kg,Available Zinc Zn (mg/kg),mg/kg,Regression_Kriging,0.6197,0.3488,0.2736,80.73,0.0,1.622,2.609,0.6197,0.7654,0.8002,-0.0801,1.0,0.0,0.0,100.0,100.0
+Zn_mg_kg,Available Zinc Zn (mg/kg),mg/kg,COMBINED_PERFECT_SYSTEM,0.7226,0.2979,0.2333,83.54,0.0,1.899,3.055,0.7226,0.8173,0.8785,-0.0788,0.9926,0.0516,0.0391,98.0,87.27
+K_kg_ha,Available Potassium K (kg/ha),kg/ha,IDW,-0.4295,358.0775,253.208,70.7,0.0,0.836,0.967,-0.4295,0.2388,0.2544,95.4965,1.0,1.6112,0.2106,99.9,99.92
+K_kg_ha,Available Potassium K (kg/ha),kg/ha,Ordinary_Kriging,-0.4253,357.5504,276.946,70.74,0.0,0.838,0.969,-0.4253,0.2214,0.286,171.6259,1.0,0.0,0.0,100.0,100.0
+K_kg_ha,Available Potassium K (kg/ha),kg/ha,Regression_ExtraTrees,-0.3725,350.8633,254.1454,71.29,0.0,0.854,0.987,-0.3725,0.3619,0.4258,168.2643,0.9757,59.0152,44.793,96.45,83.63
+K_kg_ha,Available Potassium K (kg/ha),kg/ha,Regression_Kriging,-0.3447,347.2918,252.038,71.58,0.0,0.862,0.997,-0.3447,0.3602,0.4136,153.9464,1.0,0.0,0.0,100.0,100.0
+K_kg_ha,Available Potassium K (kg/ha),kg/ha,COMBINED_PERFECT_SYSTEM,-0.3081,342.5303,251.8794,71.97,0.0,0.874,1.011,-0.3081,0.3293,0.3815,147.2915,1.0,0.2707,0.0354,99.98,99.99
+N_kg_ha,Available Nitrogen N (kg/ha),kg/ha,IDW,0.1401,39.6434,33.3609,72.47,83.32,1.078,0.903,0.1401,0.5332,0.5616,-11.8943,0.9968,3.2797,0.4288,98.62,99.76
+N_kg_ha,Available Nitrogen N (kg/ha),kg/ha,Ordinary_Kriging,0.1172,40.1659,31.749,72.11,84.04,1.064,0.891,0.1172,0.4165,0.491,-13.5947,1.0,0.0,0.0,100.0,100.0
+N_kg_ha,Available Nitrogen N (kg/ha),kg/ha,Regression_XGBoost,0.3342,34.8816,27.3914,75.78,86.73,1.226,1.026,0.3342,0.6318,0.6462,-7.0005,0.9653,10.7383,8.1021,95.49,95.08
+N_kg_ha,Available Nitrogen N (kg/ha),kg/ha,Regression_Kriging,0.317,35.3303,27.7665,75.47,86.56,1.21,1.013,0.317,0.6256,0.6407,-7.551,1.0,0.0,0.0,100.0,100.0
+N_kg_ha,Available Nitrogen N (kg/ha),kg/ha,COMBINED_PERFECT_SYSTEM,0.397,33.1956,24.3014,76.95,87.84,1.288,1.078,0.397,0.5955,0.6747,-10.2805,0.9912,5.3971,4.0721,97.74,97.53
+pH,Soil pH,pH units,IDW,0.6537,0.1531,0.1298,87.75,98.41,1.699,1.796,0.6537,0.7785,0.8159,0.0219,0.9967,0.015,0.002,98.9,99.98
+pH,Soil pH,pH units,Ordinary_Kriging,0.2856,0.2199,0.1755,82.41,97.88,1.183,1.251,0.2856,0.3209,0.7403,0.0014,1.0,0.0,0.0,100.0,100.0
+pH,Soil pH,pH units,Regression_ExtraTrees,0.4088,0.2,0.1601,84.0,98.05,1.301,1.375,0.4088,0.5978,0.6754,0.0563,0.9631,0.0503,0.0384,96.33,99.53
+pH,Soil pH,pH units,Regression_Kriging,0.4553,0.192,0.158,84.64,98.07,1.355,1.432,0.4553,0.6473,0.711,0.0582,1.0,0.0,0.0,100.0,100.0
+pH,Soil pH,pH units,COMBINED_PERFECT_SYSTEM,0.4538,0.1923,0.1447,84.62,98.25,1.353,1.43,0.4538,0.5188,0.824,0.0223,0.9984,0.0106,0.008,99.22,99.9
+OC_percent,Organic Carbon OC (%),%,IDW,0.4057,0.2122,0.1796,81.38,67.62,1.297,1.626,0.4057,0.5955,0.6394,0.0091,0.9999,0.0033,0.0004,99.79,99.92
+OC_percent,Organic Carbon OC (%),%,Ordinary_Kriging,0.4726,0.1999,0.1619,82.46,68.19,1.377,1.726,0.4726,0.6085,0.7141,0.0367,1.0,0.0,0.0,100.0,100.0
+OC_percent,Organic Carbon OC (%),%,Regression_XGBoost,0.3744,0.2178,0.1787,80.9,62.12,1.264,1.584,0.3744,0.6596,0.7237,0.1017,0.9649,0.0606,0.0485,96.16,90.77
+OC_percent,Organic Carbon OC (%),%,Regression_Kriging,0.3786,0.217,0.1782,80.96,62.15,1.269,1.59,0.3786,0.6644,0.7282,0.1023,1.0,0.0,0.0,100.0,100.0
+OC_percent,Organic Carbon OC (%),%,COMBINED_PERFECT_SYSTEM,0.4298,0.2079,0.1682,81.76,64.26,1.324,1.66,0.4298,0.6668,0.7337,0.0899,0.9765,0.0496,0.0397,96.86,92.45
+SOM_percent,Soil Organic Matter SOM (%),%,IDW,-0.1936,0.3202,0.2738,65.57,64.21,0.915,1.296,-0.1936,0.1364,0.1552,0.034,0.9995,0.007,0.0012,99.46,99.87
+SOM_percent,Soil Organic Matter SOM (%),%,Ordinary_Kriging,0.0182,0.2904,0.2488,68.78,66.39,1.009,1.429,0.0182,0.0596,0.3265,0.0548,1.0,0.0,0.0,100.0,100.0
+SOM_percent,Soil Organic Matter SOM (%),%,Regression_RandomForest,0.0409,0.287,0.2444,69.14,66.47,1.021,1.446,0.0409,0.211,0.3292,0.074,0.978,0.0481,0.0376,96.27,95.17
+SOM_percent,Soil Organic Matter SOM (%),%,Regression_Kriging,0.0466,0.2861,0.2399,69.23,67.05,1.024,1.45,0.0466,0.213,0.3241,0.0674,1.0,0.0,0.0,100.0,100.0
+SOM_percent,Soil Organic Matter SOM (%),%,COMBINED_PERFECT_SYSTEM,0.0685,0.2828,0.2453,69.59,66.56,1.036,1.467,0.0685,0.1479,0.3832,0.0646,0.9942,0.0246,0.0192,98.09,97.53
+Mn_mg_kg,Available Manganese Mn (mg/kg),mg/kg,IDW,0.2681,3.8398,2.1976,78.08,64.37,1.169,0.91,0.2681,0.5477,0.5739,-0.6663,0.999,0.137,0.0221,99.22,99.8
+Mn_mg_kg,Available Manganese Mn (mg/kg),mg/kg,Ordinary_Kriging,0.2556,3.8725,2.5613,77.9,0.0,1.159,0.903,0.2556,0.4068,0.5084,-0.2411,1.0,0.0,0.0,100.0,100.0
+Mn_mg_kg,Available Manganese Mn (mg/kg),mg/kg,Regression_RandomForest,0.0432,4.3904,3.2424,74.94,0.0,1.022,0.796,0.0432,0.2829,0.3267,-0.0977,0.9846,0.5359,0.434,96.96,0.0
+Mn_mg_kg,Available Manganese Mn (mg/kg),mg/kg,Regression_Kriging,0.0463,4.3832,3.1868,74.98,0.0,1.024,0.797,0.0463,0.3358,0.3662,-0.222,1.0,0.0,0.0,100.0,100.0
+Mn_mg_kg,Available Manganese Mn (mg/kg),mg/kg,COMBINED_PERFECT_SYSTEM,0.2416,3.9088,2.5178,77.69,0.0,1.148,0.894,0.2416,0.483,0.5246,-0.4682,0.998,0.1953,0.1388,98.89,67.8
+S_kg_ha,Available Sulphur S (kg/ha),kg/ha,IDW,0.0537,22.1374,16.1408,74.64,54.0,1.028,1.184,0.0537,0.2682,0.3516,-5.0828,0.9955,1.7161,0.2286,98.47,99.42
+S_kg_ha,Available Sulphur S (kg/ha),kg/ha,Ordinary_Kriging,0.0411,22.285,16.2299,74.47,50.57,1.021,1.176,0.0411,0.0576,0.5072,-2.7107,1.0,0.0,0.0,100.0,100.0
+S_kg_ha,Available Sulphur S (kg/ha),kg/ha,Regression_ExtraTrees,0.3256,18.6887,15.0424,78.59,55.93,1.218,1.402,0.3256,0.5835,0.6086,-2.9383,0.9611,5.0593,3.8641,95.49,81.29
+S_kg_ha,Available Sulphur S (kg/ha),kg/ha,Regression_Kriging,0.2977,19.0707,15.4079,78.16,54.8,1.193,1.374,0.2977,0.5718,0.5922,-2.6045,1.0,0.0,0.0,100.0,100.0
+S_kg_ha,Available Sulphur S (kg/ha),kg/ha,COMBINED_PERFECT_SYSTEM,0.3072,18.9422,15.1999,78.3,55.58,1.201,1.384,0.3072,0.5675,0.5924,-2.608,1.0,0.0,0.0,100.0,100.0
+P_kg_ha,Available Phosphorus P (kg/ha),kg/ha,IDW,-0.0478,13.8547,10.6613,74.53,19.2,0.977,1.361,-0.0478,0.2133,0.2672,-3.0071,0.9968,0.8419,0.1078,98.83,99.26
+P_kg_ha,Available Phosphorus P (kg/ha),kg/ha,Ordinary_Kriging,0.1685,12.3419,9.637,77.31,23.54,1.097,1.528,0.1685,0.2101,0.5022,0.8694,1.0,0.0,0.0,100.0,100.0
+P_kg_ha,Available Phosphorus P (kg/ha),kg/ha,Regression_Ridge,0.044,13.2343,10.6867,75.67,23.19,1.023,1.425,0.044,0.0519,0.2993,0.3739,0.9561,3.1393,2.4222,95.64,85.57
+P_kg_ha,Available Phosphorus P (kg/ha),kg/ha,Regression_Kriging,0.1739,12.3022,9.2975,77.39,21.99,1.1,1.533,0.1739,0.2563,0.4424,1.1557,1.0,0.0,0.0,100.0,100.0
+P_kg_ha,Available Phosphorus P (kg/ha),kg/ha,COMBINED_PERFECT_SYSTEM,0.1286,12.6346,10.0287,76.77,23.41,1.071,1.493,0.1286,0.1536,0.4816,0.6845,0.9939,1.1716,0.904,98.37,94.62
+total_carbon_percent,Total Carbon (%),%,IDW,-0.1404,0.31,0.2517,69.7,67.18,0.936,1.339,-0.1404,0.3921,0.5574,0.1927,1.0,0.0,0.0,100.0,100.0
+total_carbon_percent,Total Carbon (%),%,Ordinary_Kriging,-0.5897,0.366,0.3099,64.23,57.88,0.793,1.134,-0.5897,0.0847,0.6669,0.2471,1.0,0.0,0.0,100.0,100.0
+total_carbon_percent,Total Carbon (%),%,Regression_ExtraTrees,-0.867,0.3966,0.3435,61.23,55.65,0.732,1.046,-0.867,0.1197,0.2531,0.2706,0.9861,0.0543,0.0424,96.89,95.75
+total_carbon_percent,Total Carbon (%),%,Regression_Kriging,-0.7887,0.3882,0.3319,62.05,57.22,0.748,1.069,-0.7887,0.1715,0.3433,0.2704,1.0,0.0,0.0,100.0,100.0
+total_carbon_percent,Total Carbon (%),%,COMBINED_PERFECT_SYSTEM,-0.8225,0.3919,0.3362,61.7,56.55,0.741,1.059,-0.8225,0.1456,0.3019,0.2705,0.9963,0.0279,0.0218,98.4,97.82
+EC_dS_m,Electrical Conductivity EC (dS/m),dS/m,IDW,0.0793,0.2988,0.2168,70.71,67.35,1.042,1.674,0.0793,0.2669,0.4198,-0.0968,0.9999,0.0026,0.0003,99.84,99.92
+EC_dS_m,Electrical Conductivity EC (dS/m),dS/m,Ordinary_Kriging,0.0997,0.2954,0.2476,71.04,53.89,1.054,1.692,0.0997,0.1554,0.3265,-0.0126,1.0,0.0,0.0,100.0,100.0
+EC_dS_m,Electrical Conductivity EC (dS/m),dS/m,Regression_ExtraTrees,0.3584,0.2494,0.2053,75.55,65.37,1.248,2.005,0.3584,0.4459,0.7043,-0.0478,0.9306,0.0914,0.0678,94.43,86.91
+EC_dS_m,Electrical Conductivity EC (dS/m),dS/m,Regression_Kriging,0.3701,0.2471,0.2011,75.77,66.3,1.26,2.023,0.3701,0.4591,0.7233,-0.052,1.0,0.0,0.0,100.0,100.0
+EC_dS_m,Electrical Conductivity EC (dS/m),dS/m,COMBINED_PERFECT_SYSTEM,0.1626,0.2849,0.2397,72.07,55.89,1.093,1.755,0.1626,0.2095,0.4701,-0.0186,1.0,0.0,0.0,100.0,100.0
+moisture_bulk_density_g_cm3,Bulk Density (g/cm³),g/cm³,IDW,-1.3802,0.175,0.1227,63.23,87.89,0.648,0.643,-1.3802,-0.2208,-0.2268,0.0251,0.9448,0.0303,0.0053,94.97,99.44
+moisture_bulk_density_g_cm3,Bulk Density (g/cm³),g/cm³,Ordinary_Kriging,-0.1943,0.124,0.096,73.96,90.23,0.915,0.908,-0.1943,0.0265,0.0554,0.0425,1.0,0.0,0.0,100.0,100.0
+moisture_bulk_density_g_cm3,Bulk Density (g/cm³),g/cm³,Regression_RandomForest,0.0092,0.1129,0.0753,76.28,92.33,1.005,0.996,0.0092,0.177,0.2527,0.0183,0.929,0.0343,0.017,94.3,98.33
+moisture_bulk_density_g_cm3,Bulk Density (g/cm³),g/cm³,Regression_Kriging,-0.256,0.1271,0.0865,73.29,91.29,0.892,0.885,-0.256,0.032,0.0395,0.0165,1.0,0.0,0.0,100.0,100.0
+moisture_bulk_density_g_cm3,Bulk Density (g/cm³),g/cm³,COMBINED_PERFECT_SYSTEM,-0.2512,0.1269,0.0882,73.34,91.12,0.894,0.887,-0.2512,0.0137,0.0179,0.0204,0.9371,0.0323,0.0134,94.64,98.67

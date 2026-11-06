@@ -1,0 +1,16 @@
+Target,Target_Label,Weight_IDW,Weight_Kriging,Weight_ML_Regression,Weight_Regression_Kriging,Sum_Weights,Dominant_Algorithm
+CaCO3_percent,Calcium Carbonate CaCO₃ (%),0.0,0.7438,0.0,0.2562,1.0,Kriging
+Fe_mg_kg,Available Iron Fe (mg/kg),0.0184,0.817,0.1646,0.0,1.0,Kriging
+Cu_mg_kg,Available Copper Cu (mg/kg),0.0,0.2483,0.7517,0.0,1.0,ML (RandomForest)
+Zn_mg_kg,Available Zinc Zn (mg/kg),0.0,0.2789,0.7211,0.0,1.0,ML (ExtraTrees)
+K_kg_ha,Available Potassium K (kg/ha),0.168,0.179,0.0,0.653,1.0,Regression Kriging
+N_kg_ha,Available Nitrogen N (kg/ha),0.0,0.4974,0.5026,0.0,1.0,ML (XGBoost)
+pH,Soil pH,0.0441,0.5972,0.2067,0.152,1.0,Kriging
+OC_percent,Organic Carbon OC (%),0.0,0.1816,0.8184,0.0,1.0,ML (XGBoost)
+SOM_percent,Soil Organic Matter SOM (%),0.0,0.4883,0.5117,0.0,1.0,ML (RandomForest)
+Mn_mg_kg,Available Manganese Mn (mg/kg),0.6341,0.0082,0.2875,0.0702,1.0,IDW
+S_kg_ha,Available Sulphur S (kg/ha),0.0,0.033,0.0,0.967,1.0,Regression Kriging
+P_kg_ha,Available Phosphorus P (kg/ha),0.0,0.6268,0.3732,0.0,1.0,Kriging
+total_carbon_percent,Total Carbon (%),0.0,0.0,0.514,0.486,1.0,ML (ExtraTrees)
+EC_dS_m,Electrical Conductivity EC (dS/m),0.0,0.8476,0.0,0.1524,1.0,Kriging
+moisture_bulk_density_g_cm3,Bulk Density (g/cm³),0.3041,0.0,0.6959,0.0,1.0,ML (RandomForest)

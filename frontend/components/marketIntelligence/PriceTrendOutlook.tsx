@@ -456,7 +456,7 @@ export const PriceTrendOutlook: React.FC<PriceTrendOutlookProps> = ({
             <span className="text-xl font-black text-text-main">
               {metrics?.latest_price != null ? `₹${metrics.latest_price.toLocaleString("en-IN")}` : "— —"}
             </span>
-            <span className="text-[10px] text-text-muted font-semibold">₹/qtl</span>
+            <span className="text-[10px] text-text-muted font-semibold">{isMr ? "₹/टन" : "₹/Ton"}</span>
           </div>
           <span className="text-[10px] text-text-muted block truncate">
             {metrics?.latest_date ? `Date: ${metrics.latest_date}` : "Awaiting records"}
@@ -504,7 +504,7 @@ export const PriceTrendOutlook: React.FC<PriceTrendOutlookProps> = ({
                 ? `₹${metrics.average_modal_price.toLocaleString("en-IN")}`
                 : "— —"}
             </span>
-            <span className="text-[10px] text-text-muted font-semibold">₹/qtl</span>
+            <span className="text-[10px] text-text-muted font-semibold">{isMr ? "₹/टन" : "₹/Ton"}</span>
           </div>
           <span className="text-[10px] text-text-muted block truncate">
             {metrics?.median_modal_price != null ? `Median: ₹${metrics.median_modal_price}` : "—"}
@@ -768,7 +768,7 @@ export const PriceTrendOutlook: React.FC<PriceTrendOutlookProps> = ({
                   <div>
                     <span className="text-text-muted mr-1">{isMr ? "आवक:" : "Arrivals:"}</span>
                     <span className="font-semibold text-text-main">
-                      {hoveredPoint.arrival_quantity} {hoveredPoint.arrival_unit || "TONNE"}
+                      {hoveredPoint.arrival_quantity} {hoveredPoint.arrival_unit || (isMr ? "टन" : "Ton")}
                     </span>
                   </div>
                 )}

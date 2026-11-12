@@ -348,7 +348,7 @@ export const FuturePriceOutlook: React.FC<FuturePriceOutlookProps> = ({
               {isMr ? "अंदाजित बाजार भाव (Modal Rate)" : "Estimated Modal Price"}
             </span>
             <span className="text-[10px] uppercase font-bold text-text-muted">
-              {forecastData?.price_unit ? "₹ / Quintal" : "₹ / Qtl"}
+              {isMr ? "₹ / टन" : "₹ / Ton"}
             </span>
           </div>
 
@@ -417,7 +417,7 @@ export const FuturePriceOutlook: React.FC<FuturePriceOutlookProps> = ({
                 MAE:{" "}
                 <strong className="text-text-main">
                   {forecastData?.evaluation_metrics?.mae != null
-                    ? `₹${forecastData.evaluation_metrics.mae}/qtl`
+                    ? `₹${forecastData.evaluation_metrics.mae}${isMr ? "/टन" : "/Ton"}`
                     : "N/A"}
                 </strong>
               </span>
@@ -668,7 +668,7 @@ export const FuturePriceOutlook: React.FC<FuturePriceOutlookProps> = ({
                 </div>
                 <div className="font-bold text-sm">
                   ₹{hoveredPoint.price.toLocaleString("en-IN")}{" "}
-                  <span className="text-[10px] text-gray-300 font-normal">/ Quintal</span>
+                  <span className="text-[10px] text-gray-300 font-normal">{isMr ? " / टन" : " / Ton"}</span>
                 </div>
                 <div className="text-[10px] text-gray-300">Date: {hoveredPoint.date}</div>
                 {hoveredPoint.lower != null && (
@@ -711,7 +711,7 @@ export const FuturePriceOutlook: React.FC<FuturePriceOutlookProps> = ({
                   <thead className="bg-surface-ground text-text-muted font-bold text-[11px] border-b border-surface-border">
                     <tr>
                       <th className="p-2.5">Algorithm</th>
-                      <th className="p-2.5">MAE (₹/qtl)</th>
+                      <th className="p-2.5">{isMr ? "MAE (₹/टन)" : "MAE (₹/Ton)"}</th>
                       <th className="p-2.5">RMSE (₹)</th>
                       <th className="p-2.5">MAPE (%)</th>
                       <th className="p-2.5">MASE</th>

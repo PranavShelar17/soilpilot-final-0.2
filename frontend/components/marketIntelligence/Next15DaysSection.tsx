@@ -440,7 +440,7 @@ export const Next15DaysSection: React.FC<Next15DaysSectionProps> = ({
                           {isMr ? "अपेक्षित सरासरी दर" : "Expected Modal Price"}
                         </span>
                         <span className="font-extrabold text-soil-primary text-sm">
-                          ₹{option.price_outlook.predicted_modal_price?.toLocaleString("en-IN")} / Quintal
+                          ₹{option.price_outlook.predicted_modal_price?.toLocaleString("en-IN")}{isMr ? " / टन" : " / Ton"}
                         </span>
                       </div>
                       <div>

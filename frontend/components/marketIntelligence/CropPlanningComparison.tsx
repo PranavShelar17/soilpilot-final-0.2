@@ -820,10 +820,10 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                             {crop.financials?.assumed_price_modal ? (
                               <div>
                                 <span className="font-bold text-sm text-[#2A7C13] block">
-                                  ₹{Math.round(crop.financials.assumed_price_modal).toLocaleString("en-IN")}/q
+                                  ₹{Math.round(crop.financials.assumed_price_modal).toLocaleString("en-IN")}{isMr ? " / टन" : " / Ton"}
                                 </span>
                                 <span className="text-[10px] text-text-muted block">
-                                  {crop.financials.price_source_type === "FORECAST_MODAL" ? "≈ Harvest Forecast" : "Recent Market"}
+                                  {crop.financials.price_source_type === "FORECAST_MODAL" ? (isMr ? "≈ काढणी अंदाज" : "≈ Harvest Forecast") : (isMr ? "अद्यतन बाजार दर" : "Recent Market")}
                                 </span>
                               </div>
                             ) : (
@@ -839,7 +839,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                               <div>
                                 <span className="text-sm">{formatCurrency(revenue)}</span>
                                 <span className="block text-[10px] text-text-muted font-normal">
-                                  Yield: {sc?.assumed_yield_per_acre} q/ac
+                                  {isMr ? "उत्पादन: " : "Yield: "}{sc?.assumed_yield_per_acre} {isMr ? "टन/एकर" : "Ton/ac"}
                                 </span>
                               </div>
                             ) : (
@@ -1031,7 +1031,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                                           {areaUnitView === "ha"
                                             ? crop.financials.yield_benchmark.yield_min_per_ha
                                             : crop.financials.yield_benchmark.yield_min_per_acre}{" "}
-                                          q/{areaUnitView === "ha" ? "ha" : "ac"}
+                                          {isMr ? "टन" : "Ton"}/{areaUnitView === "ha" ? (isMr ? "हे" : "ha") : (isMr ? "एकर" : "ac")}
                                         </span>
                                       </div>
                                       <div className="flex justify-between font-semibold text-[#2A7C13]">
@@ -1040,7 +1040,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                                           {areaUnitView === "ha"
                                             ? crop.financials.yield_benchmark.yield_expected_per_ha
                                             : crop.financials.yield_benchmark.yield_expected_per_acre}{" "}
-                                          q/{areaUnitView === "ha" ? "ha" : "ac"}
+                                          {isMr ? "टन" : "Ton"}/{areaUnitView === "ha" ? (isMr ? "हे" : "ha") : (isMr ? "एकर" : "ac")}
                                         </span>
                                       </div>
                                       <div className="flex justify-between">
@@ -1049,7 +1049,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                                           {areaUnitView === "ha"
                                             ? crop.financials.yield_benchmark.yield_max_per_ha
                                             : crop.financials.yield_benchmark.yield_max_per_acre}{" "}
-                                          q/{areaUnitView === "ha" ? "ha" : "ac"}
+                                          {isMr ? "टन" : "Ton"}/{areaUnitView === "ha" ? (isMr ? "हे" : "ha") : (isMr ? "एकर" : "ac")}
                                         </span>
                                       </div>
                                     </div>
@@ -1065,7 +1065,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                                         <div className="p-2 rounded bg-amber-50 border border-amber-200">
                                           <span className="text-amber-800 block font-semibold">{isMr ? "कमी भाव" : "Conservative"}</span>
                                           <span className="font-bold block text-xs mt-0.5">
-                                            ₹{crop.financials.conservative_scenario?.assumed_price_per_unit}/q
+                                            ₹{crop.financials.conservative_scenario?.assumed_price_per_unit != null ? Math.round(crop.financials.conservative_scenario.assumed_price_per_unit).toLocaleString("en-IN") : "—"}{isMr ? " / टन" : " / Ton"}
                                           </span>
                                           <span className="text-text-muted block mt-1">
                                             Net: ₹
@@ -1079,7 +1079,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                                         <div className="p-2 rounded bg-[#2A7C13]/10 border border-[#2A7C13]/30">
                                           <span className="text-[#2A7C13] block font-semibold">{isMr ? "मध्यम भाव" : "Central Modal"}</span>
                                           <span className="font-bold block text-xs mt-0.5 text-[#2A7C13]">
-                                            ₹{crop.financials.central_scenario.assumed_price_per_unit}/q
+                                            ₹{Math.round(crop.financials.central_scenario.assumed_price_per_unit).toLocaleString("en-IN")}{isMr ? " / टन" : " / Ton"}
                                           </span>
                                           <span className="text-[#2A7C13] block mt-1 font-semibold">
                                             Net: ₹
@@ -1091,7 +1091,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                                         <div className="p-2 rounded bg-emerald-50 border border-emerald-200">
                                           <span className="text-emerald-800 block font-semibold">{isMr ? "उच्च भाव" : "Optimistic"}</span>
                                           <span className="font-bold block text-xs mt-0.5">
-                                            ₹{crop.financials.optimistic_scenario?.assumed_price_per_unit}/q
+                                            ₹{crop.financials.optimistic_scenario?.assumed_price_per_unit != null ? Math.round(crop.financials.optimistic_scenario.assumed_price_per_unit).toLocaleString("en-IN") : "—"}{isMr ? " / टन" : " / Ton"}
                                           </span>
                                           <span className="text-text-muted block mt-1">
                                             Net: ₹
@@ -1199,7 +1199,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                               ? `₹${Math.round(crop.financials.assumed_price_modal).toLocaleString("en-IN")}`
                               : "—"}
                             <span className="text-[10px] font-normal text-text-muted ml-1">
-                              ₹ / क्विंटल
+                              {isMr ? " / टन" : " / Ton"}
                             </span>
                           </div>
                           {crop.financials?.conservative_scenario?.assumed_price_per_unit != null &&
@@ -1263,15 +1263,15 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                             <div className="grid grid-cols-3 gap-2 text-[11px] pt-1">
                               <div className="bg-slate-50 p-2 rounded-lg text-center">
                                 <span className="text-text-muted block text-[10px]">{isMr ? "किमान" : "Min"}</span>
-                                <strong className="text-text-main">{crop.financials.yield_benchmark.yield_min_per_acre} q/ac</strong>
+                                <strong className="text-text-main">{crop.financials.yield_benchmark.yield_min_per_acre} {isMr ? "टन/एकर" : "Ton/ac"}</strong>
                               </div>
                               <div className="bg-[#2A7C13]/10 p-2 rounded-lg text-center border border-[#2A7C13]/20">
                                 <span className="text-[#2A7C13] block text-[10px] font-bold">{isMr ? "सरासरी" : "Central"}</span>
-                                <strong className="text-[#2A7C13]">{crop.financials.yield_benchmark.yield_expected_per_acre} q/ac</strong>
+                                <strong className="text-[#2A7C13]">{crop.financials.yield_benchmark.yield_expected_per_acre} {isMr ? "टन/एकर" : "Ton/ac"}</strong>
                               </div>
                               <div className="bg-slate-50 p-2 rounded-lg text-center">
                                 <span className="text-text-muted block text-[10px]">{isMr ? "कमाल" : "Optimal"}</span>
-                                <strong className="text-text-main">{crop.financials.yield_benchmark.yield_max_per_acre} q/ac</strong>
+                                <strong className="text-text-main">{crop.financials.yield_benchmark.yield_max_per_acre} {isMr ? "टन/एकर" : "Ton/ac"}</strong>
                               </div>
                             </div>
                           </div>
@@ -1381,7 +1381,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                         <th className="p-3">Season</th>
                         <th className="p-3">Cost A2+FL (₹/ac)</th>
                         <th className="p-3">Cost C2 (₹/ac)</th>
-                        <th className="p-3">Expected Yield (q/ac)</th>
+                        <th className="p-3">{isMr ? "अपेक्षित उत्पादन (टन/एकर)" : "Expected Yield (Ton/ac)"}</th>
                         <th className="p-3">Source & Reference</th>
                       </tr>
                     </thead>
@@ -1393,7 +1393,7 @@ export const CropPlanningComparison: React.FC<CropPlanningComparisonProps> = ({
                           <td className="p-3 font-semibold text-[#2A7C13]">₹{b.operational_cost_per_acre.toLocaleString("en-IN")}</td>
                           <td className="p-3 text-text-secondary">₹{b.total_cost_per_acre.toLocaleString("en-IN")}</td>
                           <td className="p-3 font-medium">
-                            {round(b.yield_expected_ha * 0.404685642, 1)} {b.yield_unit}/ac
+                            {round(b.yield_expected_ha * 0.404685642, 1)} {isMr ? "टन/एकर" : "Ton/ac"}
                           </td>
                           <td className="p-3 text-[11px] text-text-muted">
                             <span className="font-medium text-text-primary block">{b.source_organization}</span>

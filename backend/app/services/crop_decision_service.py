@@ -78,10 +78,10 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
         "season": "RABI",
         "operational_cost_per_ha": 26500.0,  # A2 + FL (₹/ha)
         "total_cost_per_ha": 40500.0,        # C2 Comprehensive (₹/ha)
-        "yield_min_ha": 10.0,                # Quintals/ha
-        "yield_expected_ha": 12.0,
-        "yield_max_ha": 14.0,
-        "yield_unit": "QUINTAL",
+        "yield_min_ha": 1.0,                 # Tonnes/ha
+        "yield_expected_ha": 1.2,
+        "yield_max_ha": 1.4,
+        "yield_unit": "TONNE",
         "source_org": "CACP & MPKV Rahuri",
         "source_ref": "CACP Price Policy for Rabi Crops 2024-25 & MPKV Pulse Economics",
         "cost_components": [
@@ -100,10 +100,10 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
         "season": "RABI",
         "operational_cost_per_ha": 88000.0,  # A2 + FL (₹/ha)
         "total_cost_per_ha": 132000.0,       # C2 Comprehensive (₹/ha)
-        "yield_min_ha": 180.0,               # Quintals/ha
-        "yield_expected_ha": 210.0,
-        "yield_max_ha": 240.0,
-        "yield_unit": "QUINTAL",
+        "yield_min_ha": 18.0,                # Tonnes/ha
+        "yield_expected_ha": 21.0,
+        "yield_max_ha": 24.0,
+        "yield_unit": "TONNE",
         "source_org": "ICAR-DOGR & MPKV Rahuri",
         "source_ref": "ICAR-DOGR Technical Bulletin No. 22 & MPKV Package of Practices",
         "cost_components": [
@@ -123,10 +123,10 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
         "season": "RABI",
         "operational_cost_per_ha": 29500.0,  # A2 + FL
         "total_cost_per_ha": 46000.0,        # C2
-        "yield_min_ha": 25.0,                # Quintals/ha
-        "yield_expected_ha": 30.0,
-        "yield_max_ha": 35.0,
-        "yield_unit": "QUINTAL",
+        "yield_min_ha": 2.5,                 # Tonnes/ha
+        "yield_expected_ha": 3.0,
+        "yield_max_ha": 3.5,
+        "yield_unit": "TONNE",
         "source_org": "CACP & MPKV Rahuri",
         "source_ref": "CACP Comprehensive Scheme (Peninsular Zone Irrigated Wheat)",
         "cost_components": [
@@ -146,10 +146,10 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
         "season": "RABI",
         "operational_cost_per_ha": 32000.0,  # A2 + FL
         "total_cost_per_ha": 49000.0,        # C2
-        "yield_min_ha": 45.0,                # Quintals/ha
-        "yield_expected_ha": 52.0,
-        "yield_max_ha": 60.0,
-        "yield_unit": "QUINTAL",
+        "yield_min_ha": 4.5,                 # Tonnes/ha
+        "yield_expected_ha": 5.2,
+        "yield_max_ha": 6.0,
+        "yield_unit": "TONNE",
         "source_org": "MPKV Rahuri & CACP",
         "source_ref": "MPKV Rabi Maize Package of Practices & Directorate of Economics & Statistics",
         "cost_components": [
@@ -168,10 +168,10 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
         "season": "ANNUAL",
         "operational_cost_per_ha": 118000.0, # A2 + FL
         "total_cost_per_ha": 175000.0,       # C2
-        "yield_min_ha": 850.0,               # Quintals/ha (85 Tonnes/ha)
-        "yield_expected_ha": 1000.0,         # 100 Tonnes/ha = 1000 Q/ha
-        "yield_max_ha": 1150.0,              # 115 Tonnes/ha
-        "yield_unit": "QUINTAL",
+        "yield_min_ha": 85.0,                # Tonnes/ha
+        "yield_expected_ha": 100.0,
+        "yield_max_ha": 115.0,
+        "yield_unit": "TONNE",
         "source_org": "Vasantdada Sugar Institute & CACP",
         "source_ref": "VSI Manjari Sugarcane Agronomy Manual & CACP Sugarcane Price Reports",
         "cost_components": [
@@ -190,10 +190,10 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
         "season": "KHARIF",
         "operational_cost_per_ha": 27500.0,  # A2 + FL
         "total_cost_per_ha": 41000.0,        # C2
-        "yield_min_ha": 15.0,                # Quintals/ha
-        "yield_expected_ha": 17.5,
-        "yield_max_ha": 20.0,
-        "yield_unit": "QUINTAL",
+        "yield_min_ha": 1.5,                 # Tonnes/ha
+        "yield_expected_ha": 1.75,
+        "yield_max_ha": 2.0,
+        "yield_unit": "TONNE",
         "source_org": "CACP & ICAR-IISR Indore",
         "source_ref": "CACP Comprehensive Scheme (Maharashtra Soybean) & ICAR-IISR Bulletin 34",
         "cost_components": [
@@ -212,10 +212,10 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
         "season": "KHARIF",
         "operational_cost_per_ha": 29000.0,  # A2 + FL
         "total_cost_per_ha": 43000.0,        # C2
-        "yield_min_ha": 10.0,                # Quintals/ha
-        "yield_expected_ha": 12.5,
-        "yield_max_ha": 15.0,
-        "yield_unit": "QUINTAL",
+        "yield_min_ha": 1.0,                 # Tonnes/ha
+        "yield_expected_ha": 1.25,
+        "yield_max_ha": 1.5,
+        "yield_unit": "TONNE",
         "source_org": "CACP & MPKV Rahuri",
         "source_ref": "CACP Comprehensive Scheme (Maharashtra Pulses) & MPKV Pulses Technology",
         "cost_components": [
@@ -234,10 +234,10 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
         "season": "KHARIF",
         "operational_cost_per_ha": 45000.0,  # A2 + FL
         "total_cost_per_ha": 68000.0,        # C2
-        "yield_min_ha": 14.0,                # Quintals/ha (Seed cotton)
-        "yield_expected_ha": 16.5,
-        "yield_max_ha": 20.0,
-        "yield_unit": "QUINTAL",
+        "yield_min_ha": 1.4,                 # Tonnes/ha (Seed cotton)
+        "yield_expected_ha": 1.65,
+        "yield_max_ha": 2.0,
+        "yield_unit": "TONNE",
         "source_org": "CACP & ICAR-CICR Nagpur",
         "source_ref": "CACP Kharif Price Policy & ICAR-CICR Cotton Economics Bulletin",
         "cost_components": [
@@ -247,6 +247,72 @@ VERIFIED_COST_AND_YIELD_BENCHMARKS: Dict[str, Dict[str, Any]] = {
             {"component_name": "Sucking Pest & Pink Bollworm Resistance Control", "pct": 15.6},
             {"component_name": "Interculture, Dibbling & Hand Weedings", "pct": 13.3},
             {"component_name": "Multi-Stage Manual Cotton Picking Rounds (4-5 rounds)", "pct": 22.2},
+        ],
+    },
+    "TOMATO": {
+        "crop_code": "TOMATO",
+        "alt_code": "TOMATO",
+        "crop_name": "Hybrid Tomato",
+        "season": "RABI",
+        "operational_cost_per_ha": 95000.0,
+        "total_cost_per_ha": 142000.0,
+        "yield_min_ha": 28.0,
+        "yield_expected_ha": 34.0,
+        "yield_max_ha": 40.0,
+        "yield_unit": "TONNE",
+        "source_org": "MPKV Rahuri & CACP",
+        "source_ref": "MPKV Vegetable Package of Practices",
+        "cost_components": [
+            {"component_name": "Hybrid Seedlings Pro-tray Nursery Raising", "pct": 24.7},
+            {"component_name": "Land Preparation, Raised Beds & Plastic Mulch", "pct": 22.4},
+            {"component_name": "Trellis Bamboo Staking & Wire Support", "pct": 27.6},
+            {"component_name": "Drip Fertigation & Water Soluble NPK", "pct": 28.4},
+            {"component_name": "Integrated Pest & Early/Late Blight Control", "pct": 20.9},
+            {"component_name": "Multi-harvest Picking, Sorting & Crating", "pct": 25.4},
+        ],
+    },
+    "POMEGRANATE": {
+        "crop_code": "POMEGRANATE",
+        "alt_code": "POMEGRANATE",
+        "crop_name": "Bhagwa Pomegranate",
+        "season": "ANNUAL",
+        "operational_cost_per_ha": 145000.0,
+        "total_cost_per_ha": 220000.0,
+        "yield_min_ha": 9.0,
+        "yield_expected_ha": 12.0,
+        "yield_max_ha": 15.0,
+        "yield_unit": "TONNE",
+        "source_org": "ICAR-NRCP Solapur & MPKV Rahuri",
+        "source_ref": "NRCP Research Technical Bulletin",
+        "cost_components": [
+            {"component_name": "Tissue Culture Air-Layered Saplings", "pct": 18.0},
+            {"component_name": "Pit Excavation, Organic Manuring & Basal Dosage", "pct": 15.0},
+            {"component_name": "Bacterial Blight & Wilt Management Protocols", "pct": 25.0},
+            {"component_name": "Bahar Treatment Regulation & Defoliation", "pct": 14.0},
+            {"component_name": "Drip Fertigation & Micro-sprinkler Operations", "pct": 12.0},
+            {"component_name": "Export-Grade Fruit Harvesting, Bagging & Grading", "pct": 16.0},
+        ],
+    },
+    "BANANA": {
+        "crop_code": "BANANA",
+        "alt_code": "BANANA",
+        "crop_name": "Grand Naine Banana",
+        "season": "ANNUAL",
+        "operational_cost_per_ha": 135000.0,
+        "total_cost_per_ha": 195000.0,
+        "yield_min_ha": 55.0,
+        "yield_expected_ha": 65.0,
+        "yield_max_ha": 75.0,
+        "yield_unit": "TONNE",
+        "source_org": "NRCB & Jain Irrigation R&D Jalgaon",
+        "source_ref": "NRCB Jalgaon Commercial Cultivation Manual",
+        "cost_components": [
+            {"component_name": "Secondary Hardened Tissue Culture Plants", "pct": 22.0},
+            {"component_name": "Deep Ploughing, Bed Layout & Drip Installation", "pct": 14.0},
+            {"component_name": "Intensive Potash & Nitrogen Fertigation Regimen", "pct": 26.0},
+            {"component_name": "Desuckering, De-naveling & Bunch Sleeving", "pct": 12.0},
+            {"component_name": "Sigatoka Leaf Spot & Nematode Control", "pct": 10.0},
+            {"component_name": "Bunch Harvesting, Dehanding & Foam Packing", "pct": 16.0},
         ],
     },
 }
@@ -297,7 +363,7 @@ class CropDecisionService:
                     estimated_yield_min=data["yield_min_ha"],
                     estimated_yield_expected=data["yield_expected_ha"],
                     estimated_yield_max=data["yield_max_ha"],
-                    yield_unit="QUINTAL_PER_HECTARE",
+                    yield_unit="TONNE_PER_HECTARE",
                     risk_level="MEDIUM",
                     assumptions=f"Verified CACP Comprehensive Scheme & MPKV Rahuri benchmarks (1 ha Vertisol basis)",
                     source_reference=f"{data['source_org']} — {data['source_ref']}",
@@ -396,7 +462,7 @@ class CropDecisionService:
             yield_min_per_acre=y_min_acre,
             yield_expected_per_acre=y_exp_acre,
             yield_max_per_acre=y_max_acre,
-            yield_unit=benchmark.get("yield_unit", "QUINTAL"),
+            yield_unit=benchmark.get("yield_unit", "TONNE"),
             source_reference=benchmark["source_ref"],
         )
 
@@ -444,7 +510,7 @@ class CropDecisionService:
                 scenario_name=name,
                 scenario_label=label,
                 assumed_price_per_unit=price,
-                price_unit="RS_PER_QUINTAL",
+                price_unit="RS_PER_TONNE",
                 assumed_yield_per_acre=y_acre,
                 assumed_yield_per_ha=y_ha,
                 gross_revenue_per_acre=rev_acre,
@@ -482,7 +548,7 @@ class CropDecisionService:
             optimistic_scenario=optimistic_scenario,
             price_source_type=price_source_type,
             assumed_price_modal=p_central,
-            price_unit="RS_PER_QUINTAL",
+            price_unit="RS_PER_TONNE",
             forecast_target_period=forecast_period,
             disclaimer="Scenario analysis based on CACP/MPKV cultivation costs and time-series price forecasts. Not a guaranteed return.",
         )
@@ -618,12 +684,17 @@ class CropDecisionService:
                         logger.debug(f"Forecast error for crop {crop_code}: {e}")
 
             # C. Financial Return Analysis
+            # If price is from mandi forecaster (Rs/Quintal) and yield is in TONNE, scale price by 10 (1 Ton = 10 Quintals)
+            scaled_modal = price_modal * 10.0 if price_modal is not None else None
+            scaled_lower = price_lower * 10.0 if price_lower is not None else None
+            scaled_upper = price_upper * 10.0 if price_upper is not None else None
+
             financials = self.calculate_financials(
                 crop_code=crop_code,
                 area_acres=area_acres,
-                price_modal=price_modal,
-                price_lower=price_lower,
-                price_upper=price_upper,
+                price_modal=scaled_modal,
+                price_lower=scaled_lower,
+                price_upper=scaled_upper,
                 price_source_type=price_source_type,
                 forecast_period=forecast_period_str,
             )

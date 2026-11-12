@@ -315,7 +315,7 @@ export const MarketOverviewCards: React.FC<MarketOverviewCardsProps> = ({
 
                     {/* 3. Unit */}
                     <td className="py-3.5 px-4 text-text-muted font-medium whitespace-nowrap">
-                      {obs.price_unit || "₹ / क्विंटल"}
+                      {obs.price_unit ? (isMr ? obs.price_unit.replace(/Quintal|Ton/gi, "टन").replace(/Rs\//i, "₹ / ") : obs.price_unit.replace(/Quintal/gi, "Ton").replace(/Rs\//i, "₹ / ")) : (isMr ? "₹ / टन" : "₹ / Ton")}
                     </td>
 
                     {/* 4. Market Name */}
@@ -369,7 +369,7 @@ export const MarketOverviewCards: React.FC<MarketOverviewCardsProps> = ({
                       {obs.modal_price != null ? `₹${obs.modal_price.toLocaleString("en-IN")}` : "—"}
                     </span>
                     <span className="text-xs text-text-muted font-medium ml-1">
-                      {obs.price_unit || "₹ / क्विंटल"}
+                      {obs.price_unit ? (isMr ? obs.price_unit.replace(/Quintal|Ton/gi, "टन").replace(/Rs\//i, "₹ / ") : obs.price_unit.replace(/Quintal/gi, "Ton").replace(/Rs\//i, "₹ / ")) : (isMr ? "₹ / टन" : "₹ / Ton")}
                     </span>
                   </div>
                 </div>

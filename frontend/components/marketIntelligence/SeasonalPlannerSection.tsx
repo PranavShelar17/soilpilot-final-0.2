@@ -390,7 +390,7 @@ export const SeasonalPlannerSection: React.FC<SeasonalPlannerSectionProps> = ({
                     </span>
                     {option.price_outlook?.status === "FORECAST_AVAILABLE" ? (
                       <span className="text-[10px] font-bold text-emerald-700">
-                        ₹{option.price_outlook.predicted_modal_price?.toLocaleString("en-IN")}/Q
+                        ₹{option.price_outlook.predicted_modal_price?.toLocaleString("en-IN")}{isMr ? " / टन" : " / Ton"}
                       </span>
                     ) : (
                       <span className="text-[10px] font-semibold text-amber-800">
@@ -402,7 +402,7 @@ export const SeasonalPlannerSection: React.FC<SeasonalPlannerSectionProps> = ({
                   {option.price_outlook?.status === "FORECAST_AVAILABLE" ? (
                     <p className="text-[11px] text-text-muted">
                       {isMr ? "अपेक्षित दर पट्टा: " : "Expected Interval: "}
-                      <strong>₹{option.price_outlook.lower_bound} – ₹{option.price_outlook.upper_bound}</strong> / Q ({option.price_outlook.model_identifier})
+                      <strong>₹{option.price_outlook.lower_bound} – ₹{option.price_outlook.upper_bound}</strong>{isMr ? " / टन" : " / Ton"} ({option.price_outlook.model_identifier})
                     </p>
                   ) : (
                     <p className="text-[10px] text-amber-900/90 leading-snug">

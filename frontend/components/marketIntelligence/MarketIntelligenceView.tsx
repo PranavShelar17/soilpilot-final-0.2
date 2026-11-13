@@ -6,7 +6,6 @@ import { useAuth } from "@/context/AuthContext";
 import { useSelectedFarmer } from "@/context/FarmerContext";
 import { useI18n } from "@/i18n/useI18n";
 import {
-  TrendingUp,
   LayoutDashboard,
   ChevronRight,
   Sprout,
@@ -26,8 +25,7 @@ import { Next15DaysSection } from "./Next15DaysSection";
 import { SeasonalPlannerSection } from "./SeasonalPlannerSection";
 import { FieldSuitabilitySection } from "./FieldSuitabilitySection";
 import { CropPlanningComparison } from "./CropPlanningComparison";
-import { PriceTrendOutlook } from "./PriceTrendOutlook";
-import { DataSourceReliability } from "./DataSourceReliability";
+import { CropWiseMarketPriceAnalysis } from "./CropWiseMarketPriceAnalysis";
 
 type NavigationTab = "find_crops" | "today_prices" | "plan_planting";
 
@@ -43,9 +41,8 @@ export const MarketIntelligenceView: React.FC = () => {
   // Planting options toggle within "Plan My Planting"
   const [plantingChoice, setPlantingChoice] = useState<"next15" | "seasonal">("next15");
 
-  // Optional collapsible helper for Field Suitability & Historical Analysis
+  // Optional collapsible helper for Field Suitability
   const [showFieldSuitability, setShowFieldSuitability] = useState<boolean>(false);
-  const [showPriceTrend, setShowPriceTrend] = useState<boolean>(false);
 
   // Active location context from auth
   const activeState = location?.state || "Maharashtra";
@@ -238,35 +235,11 @@ export const MarketIntelligenceView: React.FC = () => {
           selectedCommodity={filters.cropCategory !== "all" ? filters.cropCategory : "All Commodities"}
         />
 
-        {/* Secondary Collapsible for Farmers Seeking Historical Price Trends */}
-        <div className="bg-white rounded-2xl border border-[#E6E9E5] p-4 shadow-2xs">
-          <button
-            type="button"
-            onClick={() => setShowPriceTrend(!showPriceTrend)}
-            className="w-full flex items-center justify-between text-left text-xs font-bold text-[#1A2E22] hover:text-[#0B4D2B] transition-colors cursor-pointer"
-          >
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-[#176B38]" />
-              <span>
-                {isMr
-                  ? "मागील बाजारभाव कल व स्त्रोत माहिती (ऐच्छिक)"
-                  : "View Historical Price Trends & Data Sources (Optional)"}
-              </span>
-            </div>
-            {showPriceTrend ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </button>
-
-          {showPriceTrend && (
-            <div className="pt-4 mt-4 border-t border-[#E6E9E5] space-y-6 animate-in fade-in duration-200">
-              <PriceTrendOutlook
-                selectedMarket={filters.marketApmc}
-                selectedCommodity={isMr ? "निवडलेले पीक" : "Target Crop"}
-                activeDistrict={filters.district}
-              />
-              <DataSourceReliability selectedMarket={filters.marketApmc} />
-            </div>
-          )}
-        </div>
+        {/* Crop-wise Market Price Analysis: Separate Bar Graphs for Individual Crops */}
+        <CropWiseMarketPriceAnalysis
+          selectedMarket={filters.marketApmc}
+          selectedDistrict={filters.district}
+        />
       </div>
 
       {/* ============================================================== */}

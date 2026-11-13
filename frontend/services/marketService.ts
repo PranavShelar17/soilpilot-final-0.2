@@ -267,6 +267,7 @@ export const marketService = {
   async getHistoricalAnalysis(
     params: {
       commodityId?: number;
+      commodityCode?: string;
       marketId?: number;
       district?: string;
       startDate?: string;
@@ -303,7 +304,13 @@ export const marketService = {
     } catch (_err) {
       // Demo historical trends
     }
-    return getCertifiedHistoricalAnalysis(params.commodityId, params.marketId);
+    return getCertifiedHistoricalAnalysis(
+      params.commodityId,
+      params.marketId,
+      params.window,
+      params.comparisonMarketId,
+      params.commodityCode
+    );
   },
 
   /**

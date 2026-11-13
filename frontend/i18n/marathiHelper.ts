@@ -253,11 +253,15 @@ export const MARATHI_CROP_MAP: Record<string, string> = {
   "sugarcane": "ऊस",
   "sugarcane / cash crop": "ऊस / नगदी पीक",
   "sugarcane (ऊस)": "ऊस (नगदी पीक)",
+  "pomegranate": "डाळिंब",
+  "banana": "केळी",
+  "tomato": "टोमॅटो",
+  "maize": "मका",
+  "onion": "कांदा",
   "wheat": "गहू",
   "soybean": "सोयाबीन",
   "gram": "हरभरा",
   "cotton": "कापूस",
-  "onion": "कांदा",
   "cash crop": "नगदी पीक",
 };
 
@@ -322,14 +326,16 @@ export const REVERSE_CROP_MAP: Record<string, string> = {
   "ऊस": "Sugarcane",
   "ऊस / नगदी पीक": "Sugarcane / Cash Crop",
   "ऊस (नगदी पीक)": "Sugarcane",
-  "गहू": "Wheat",
-  "सोयाबीन": "Soybean",
-  "हरभरा": "Gram / Chickpea",
-  "कापूस": "Cotton",
-  "कांदा": "Onion",
-  "नगदी पीक": "Cash Crop",
+  "डाळिंब": "Pomegranate",
+  "केळी": "Banana",
   "टोमॅटो": "Tomato",
   "मका": "Maize",
+  "कांदा": "Onion",
+  "सोयाबीन": "Soybean",
+  "गहू": "Wheat",
+  "हरभरा": "Gram / Chickpea",
+  "कापूस": "Cotton",
+  "नगदी पीक": "Cash Crop",
   "बाजरी": "Bajra",
   "ज्वारी": "Jowar",
 };
@@ -542,14 +548,45 @@ export function isAllowedCrop(crop: any): boolean {
 }
 
 /**
- * Removes sub-names and secondary labels enclosed in brackets e.g.
- * "Rabi Onion (Kanda)" -> "Rabi Onion"
- * "Wheat (Gahu)" -> "Wheat"
- * "कांदा (रब्बी)" -> "कांदा"
+ * Removes sub-names, secondary labels enclosed in brackets, and variety qualifiers
+ * e.g. "Bhagwa Pomegranate" -> "Pomegranate", "Suru Sugarcane" -> "Sugarcane"
+ * "Grand Naine Banana" -> "Banana", "Rabi Grain Maize" -> "Maize"
+ * "Rabi Red Onion" -> "Onion", "Yellow Soybean" -> "Soybean"
  */
 export function cleanCropName(name?: string | null): string {
   if (!name) return "";
-  return name.replace(/\s*\([^)]*\)/g, "").trim();
+  let cleaned = name.replace(/\s*\([^)]*\)/g, "").trim();
+
+  // Strip variety adjectives / prefixes / suffixes in English and Marathi
+  if (/pomegranate|डाळिंब/i.test(cleaned)) {
+    return /[\u0900-\u097F]/.test(cleaned) ? "डाळिंब" : "Pomegranate";
+  }
+  if (/banana|केळी/i.test(cleaned)) {
+    return /[\u0900-\u097F]/.test(cleaned) ? "केळी" : "Banana";
+  }
+  if (/tomato|टोमॅटो/i.test(cleaned)) {
+    return /[\u0900-\u097F]/.test(cleaned) ? "टोमॅटो" : "Tomato";
+  }
+  if (/onion|कांदा/i.test(cleaned)) {
+    return /[\u0900-\u097F]/.test(cleaned) ? "कांदा" : "Onion";
+  }
+  if (/sugarcane|ऊस/i.test(cleaned)) {
+    return /[\u0900-\u097F]/.test(cleaned) ? "ऊस" : "Sugarcane";
+  }
+  if (/maize|corn|मका/i.test(cleaned)) {
+    return /[\u0900-\u097F]/.test(cleaned) ? "मका" : "Maize";
+  }
+  if (/soybean|सोयाबीन/i.test(cleaned)) {
+    return /[\u0900-\u097F]/.test(cleaned) ? "सोयाबीन" : "Soybean";
+  }
+
+  // General fallback: remove common variety prefixes
+  cleaned = cleaned
+    .replace(/^(Bhagwa|Grand Naine|Suru|Rabi Grain|Rabi Red|Rabi|Hybrid|Yellow|Table)\s+/i, "")
+    .replace(/^(भगवा|ग्रँड नैन|सुरू|रब्बी धान्य|रब्बी लाल|रब्बी|संकरित|हायब्रिड|पिवळा|पिवळे)\s+/i, "")
+    .trim();
+
+  return cleaned;
 }
 
 /**

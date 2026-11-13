@@ -19,9 +19,18 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-// Dynamically import Leaflet Map to avoid SSR window errors
+// Dynamically import Leaflet Map to avoid SSR window errors with automatic chunk error recovery
 const CropSuitabilityMap = dynamic(
-  () => import("@/components/map/CropSuitabilityMap").then((m) => m.CropSuitabilityMap),
+  () =>
+    import("@/components/map/CropSuitabilityMap")
+      .then((m) => m.CropSuitabilityMap)
+      .catch((err) => {
+        console.warn("Chunk load error detected for CropSuitabilityMap, recovering...", err);
+        if (typeof window !== "undefined") {
+          window.location.reload();
+        }
+        throw err;
+      }),
   {
     ssr: false,
     loading: () => (
@@ -32,6 +41,50 @@ const CropSuitabilityMap = dynamic(
     ),
   }
 );
+
+class MapErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: any) {
+    console.warn("MapErrorBoundary caught:", error);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="w-full h-full min-h-[520px] bg-surface-subtle flex flex-col items-center justify-center rounded-2xl border border-surface-border p-6 text-center space-y-3">
+          <Compass className="w-8 h-8 text-soil-primary mb-1 animate-pulse" />
+          <span className="text-sm font-bold text-text-main">
+            GIS Map Module Reloading...
+          </span>
+          <p className="text-xs text-text-muted max-w-sm">
+            Visualization bundle updated. Click below to refresh the map view.
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              if (typeof window !== "undefined") window.location.reload();
+            }}
+            className="px-4 py-2 bg-soil-primary text-white text-xs font-bold rounded-lg shadow-sm hover:bg-soil-primary/90 transition-colors"
+          >
+            Refresh Map
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 function FieldSuitabilityContent() {
   const { language } = useI18n();
@@ -220,16 +273,18 @@ function FieldSuitabilityContent() {
         {/* LEFT: GIS Suitability Map focused on logged-in Gat (7 Columns) */}
         <div className="lg:col-span-7 space-y-3">
           <div className="h-[580px]">
-            <CropSuitabilityMap
-              geoJsonData={geoJsonData}
-              selectedGatNo={selectedGatNo}
-              onSelectGat={(gat) => {
-                // If user clicks own Gat or explores
-                if (gat) setSelectedGatNo(gat);
-              }}
-              cropName={activeCrop?.crop_name || selectedCropCode}
-              className="h-full"
-            />
+            <MapErrorBoundary>
+              <CropSuitabilityMap
+                geoJsonData={geoJsonData}
+                selectedGatNo={selectedGatNo}
+                onSelectGat={(gat) => {
+                  // If user clicks own Gat or explores
+                  if (gat) setSelectedGatNo(gat);
+                }}
+                cropName={activeCrop?.crop_name || selectedCropCode}
+                className="h-full"
+              />
+            </MapErrorBoundary>
           </div>
         </div>
 
